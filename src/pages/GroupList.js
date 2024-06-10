@@ -3,10 +3,15 @@ import { useSelector } from 'react-redux';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { GroupCard } from '../components';
+import { useDispatch } from 'react-redux';
+import {clearGroups} from "../features/groups/GroupSlice"
 
 const GroupList = () => {
   const { groupsCollection: groups } = useSelector((state) => state.groups);
-  console.log(groups);
+  const dispatch = useDispatch();
+  const clearTheList = ()=>{
+    dispatch(clearGroups())
+  }
   React.useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -25,7 +30,10 @@ const GroupList = () => {
     );
   } else {
     return (
-      <GroupCard groups={groups}/>
+      <div className="flex flex-col px-8">
+        <GroupCard groups={groups} />
+        <button onClick={clearTheList} className="btn btn-block bg-primary my-8 motion capitalize">clear list</button>
+      </div>
     );
   }
 };

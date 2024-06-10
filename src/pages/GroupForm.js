@@ -28,7 +28,7 @@ const GroupForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmission} className="px-6 py-10 lg:h-[60vh]">
+    <form onSubmit={handleSubmission} className="px-6 py-10 ">
       <FormRow
         name="name"
         type="text"

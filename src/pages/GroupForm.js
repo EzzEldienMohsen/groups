@@ -2,7 +2,7 @@ import React from 'react'
 
 const GroupForm = () => {
   return (
-    <div>GroupForm</div>
+    <div className='text-3xl shadow-xl text-[skyblue] underline'>GroupForm</div>
   )
 }
 

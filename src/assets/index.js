@@ -1,9 +1,9 @@
 import { nanoid } from "nanoid";
 
 export const pages = [
-    {text:"Group Forms", to:"/group-forms"},
+    {text:"Group Forms", to:"/"},
     {text:"groups", to:"/groups"},
-    {text:"posts",to:"posts"}
+    
 ];
 export const initialGroupValue = {
     id:nanoid(),

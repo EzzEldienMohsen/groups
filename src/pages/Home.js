@@ -11,7 +11,7 @@ const Home = () => {
     localStorage.setItem('theme', JSON.stringify(!isDark));
   };
   return (
-    <div data-theme={isDark?"luxury":"light"} className="h-[100vh]">
+    <div data-theme={isDark?"luxury":"garden"} >
       <Header toggleTheme={toggleTheme} isDark={isDark}/>
       <Outlet />
     </div>

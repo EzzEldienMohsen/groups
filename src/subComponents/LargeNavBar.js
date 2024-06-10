@@ -9,6 +9,7 @@ const LargeNavBar = () => {
           return (
             <Link
               key={li.text}
+              to={li.to}
               className="mr-4 hover:text-secondary hover:underline text-lg lg:text-xl capitalize"
             >
               {li.text}

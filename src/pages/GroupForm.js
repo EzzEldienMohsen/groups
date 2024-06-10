@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { addGroup } from '../features/groups/GroupSlice';
-import { FormRow } from '../subComponents';
+import FormRow from '../subComponents/FormRow';
 import { initialGroupValue } from '../assets';
 import { nanoid } from 'nanoid';
 
@@ -39,16 +39,16 @@ const GroupForm = () => {
       />
       <FormRow
         name="description"
-        type="text"
+        type="textarea"
         value={group.description}
         handleChange={handleChange}
-        placeHolder="Group description"
+        placeHolder="Group Description"
         textColor="text-primary"
-        height="1500px"
+        height="150px" 
       />
       <button
         type="submit"
-        className="btn my-4 btn-block text-secondary bg-primary motion text-lg md:text-xl lg:text-2xl"
+        className="btn my-8 btn-block text-secondary bg-primary motion text-lg md:text-xl lg:text-2xl"
       >
         Submit
       </button>

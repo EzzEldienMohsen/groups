@@ -1,5 +1,5 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { Home, GroupForm } from './pages';
+import { Home, GroupForm, GroupList } from './pages';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -8,6 +8,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <GroupForm />,
+      },
+      {
+        path: "/groups",
+        element: <GroupList />,
       },
     ],
   },

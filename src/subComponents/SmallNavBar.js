@@ -17,6 +17,7 @@ const SmallNavBar = () => {
           return (
             <Link
               key={li.text}
+              to={li.to}
               className="mt-1 hover:text-secondary hover:underline capitalize"
             >
               {li.text}

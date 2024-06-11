@@ -47,7 +47,6 @@ const groupsSlice = createSlice({
       if (theGroup) {
         theGroup.name = group.name;
         theGroup.description = group.description;
-        theGroup.modified = new Date().toISOString();
         saveGroupsToLocalStore(state);
         toast.success('The Group is edited');
       }

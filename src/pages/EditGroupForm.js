@@ -41,11 +41,12 @@ const navigate = useNavigate();
       />
       <FormRow
         name="description"
-        type="text"
+        type="textarea"
         value={group.description}
         handleChange={handleChange}
         placeHolder="Group Description"
         textColor="text-primary"
+        height="150px"
       />
       <button
         type="submit"
